@@ -44,5 +44,6 @@ Among the themes developed throughout the seminar are:
 
 ## Website
 
-The repository is configured as a static GitHub Pages site. Pushing changes to `main` automatically republishes the site.
+**Published site:** https://hammondutra.github.io/IL14002-special-topics-capstone-seminar/
 
+The repository is configured as a static GitHub Pages site. Pushing changes to `main` automatically republishes the site.
