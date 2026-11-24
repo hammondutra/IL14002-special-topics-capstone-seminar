@@ -1,0 +1,26 @@
+[
+  {
+    "slug": "your-face-is-no-longer-proof",
+    "assignment": 5,
+    "type": "Opinion essay · Cybersecurity",
+    "title": "Your Face Is No Longer Proof You Were There",
+    "displayTitle": "Your Face Is<br>No Longer <em>Proof</em><br>You Were There",
+    "description": "What should count as proof of identity when someone's face and voice can be convincingly recreated?",
+    "path": "writings/op-ed/",
+    "year": 2026,
+    "style": "dark",
+    "label": "READ THE OP-ED"
+  },
+  {
+    "slug": "vulnerability-as-a-transaction",
+    "assignment": 2,
+    "type": "Film review · Black Mirror",
+    "title": "Vulnerability as a Transaction",
+    "displayTitle": "Vulnerability<br><em>as a</em><br>Transaction",
+    "description": "A close reading of White Christmas and the emotional costs of engineered connection.",
+    "path": "writings/film-review/",
+    "year": 2026,
+    "style": "red",
+    "label": "READ THE FILM REVIEW"
+  }
+]

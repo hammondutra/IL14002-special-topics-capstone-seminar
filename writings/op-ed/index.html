@@ -1,0 +1,125 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="light dark">
+  <meta name="theme-color" content="#141618">
+  <meta name="description" content="An op-ed on deepfakes, social engineering, and the urgent difference between recognizing a person and verifying their authority.">
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="Your Face Is No Longer Proof You Were There — Hammon Dutra">
+  <meta property="og:description" content="The problem with deepfakes isn't only what we see. It's what our systems let us trust.">
+  <title>Your Face Is No Longer Proof You Were There — Hammon Dutra</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <script defer src="script.js"></script>
+</head>
+<body>
+  <a class="skip-link" href="#essay">Skip to article</a>
+  <div class="scroll-progress" aria-hidden="true"><span id="scroll-progress-fill"></span></div>
+  <header class="topbar">
+    <a class="brand" href="../../" aria-label="Hammon Dutra, public writing portfolio"><span class="brand-mark">HD<span class="brand-dot">.</span></span><span class="brand-label">PUBLIC WRITING<br><small>IL14002 / 2026</small></span></a>
+    <nav aria-label="Site navigation" class="topbar-nav">
+      <a href="../../">All writings</a>
+      <a href="../film-review/">Film review <span aria-hidden="true">↗</span></a>
+      <button type="button" id="focus-toggle" class="focus-toggle" aria-pressed="false"><span class="focus-icon" aria-hidden="true">◎</span> Focus mode</button>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero" aria-labelledby="page-title">
+      <div class="hero-glow" aria-hidden="true"></div>
+      <div class="hero-inner">
+        <div class="hero-copy">
+          <div class="eyebrow"><span class="eyebrow-beacon" aria-hidden="true"></span> PUBLIC WRITING / OPINION 05</div>
+          <p class="issue-line">THE IDENTITY ISSUE <span aria-hidden="true">—</span> NOVEMBER 2026</p>
+          <h1 id="page-title">Your Face<br>Is No Longer<br><em>Proof</em>&nbsp;You<br>Were There</h1>
+          <p class="hero-dek">When a familiar face can be fabricated, recognition is no longer enough. An argument for verifying identity before granting authority.</p>
+          <div class="hero-byline"><span class="byline-avatar" aria-hidden="true">HD</span><span><strong>Hammon Dutra</strong><br><small>Opinion essay · Minerva University</small></span></div>
+          <a class="read-cta" href="#essay"><span>READ THE ARTICLE</span><span class="read-arrow" aria-hidden="true">↘</span></a>
+        </div>
+        <div class="hero-visual" aria-hidden="true">
+          <div class="brief-card">
+            <div class="brief-chip-row"><span class="brief-chip">EDITORIAL BRIEF</span><span class="brief-chip brief-chip-muted">IDENTITY / TRUST</span></div>
+            <div class="brief-header">
+              <p class="brief-kicker">What this essay argues</p>
+              <h2>Recognition alone should no longer be treated as proof of authority.</h2>
+            </div>
+            <p class="brief-summary">Deepfakes matter not only because they can look real, but because institutions still rely on recognizable faces and voices during high-stakes decisions.</p>
+            <ul class="brief-points">
+              <li>AI detectors can help, but they are unreliable against newer in-the-wild deepfakes.</li>
+              <li>Provenance tools verify a file’s history, not the truth of the event it depicts.</li>
+              <li>Risk-based verification procedures matter more than trusting appearances.</li>
+            </ul>
+            <div class="brief-metric-row">
+              <div class="brief-metric"><span class="brief-metric-value">15</span><span class="brief-metric-label">fraudulent transfers</span></div>
+              <div class="brief-metric"><span class="brief-metric-value">$25M</span><span class="brief-metric-label">reported loss</span></div>
+              <div class="brief-metric"><span class="brief-metric-value">2024</span><span class="brief-metric-label">Arup case</span></div>
+            </div>
+            <p class="brief-note">Core distinction: recognizing a person is not the same as verifying their authority.</p>
+          </div>
+        </div>
+      </div>
+      <div class="hero-bottom"><span>RECOGNITION IS NOT AUTHENTICATION</span><span>SCROLL TO INVESTIGATE <span aria-hidden="true">↓</span></span></div>
+    </section>
+
+    <div class="signal-band" aria-hidden="true"><div><span>VERIFY THE REQUEST</span><b>✳</b><span>NOT JUST THE FACE</span><b>✳</b><span>VERIFY THE REQUEST</span><b>✳</b><span>NOT JUST THE FACE</span><b>✳</b></div></div>
+
+    <div class="paper-zone" id="essay">
+      <div class="reading-layout">
+        <aside class="chapter-sidebar" aria-label="Article sections">
+          <p class="sidebar-head">IN THIS ARTICLE</p>
+          <nav class="chapter-links">
+            <a href="#the-case" data-chapter="the-case"><span>01</span> The deception</a>
+            <a href="#the-detectors" data-chapter="the-detectors"><span>02</span> The technology</a>
+            <a href="#the-law" data-chapter="the-law"><span>03</span> The regulation</a>
+            <a href="#the-response" data-chapter="the-response"><span>04</span> The response</a>
+          </nav>
+          <div class="sidebar-stamp"><span>EDITORIAL NOTE</span><p>From synthetic faces to everyday fraud: where trust breaks down.</p><span class="stamp-rule"></span></div>
+        </aside>
+        <article class="article-body" aria-labelledby="page-title">
+          <div class="article-introline"><span>OPINION / CYBERSECURITY</span><span>YOUR FACE IS NO LONGER PROOF</span></div>
+          <section class="chapter" id="the-case" aria-labelledby="case-heading">
+            <div class="chapter-heading"><span>01 / THE DECEPTION</span><h2 id="case-heading">A familiar face.<br><em>An unfamiliar threat.</em></h2></div>
+            <div class="article-prose first-chapter"><p>In January 2024, an employee at the engineering company Arup received what looked like a message from its chief financial officer. Later, during a video conference, the employee saw familiar colleagues giving instructions about a confidential transaction. The meeting looked convincing enough for the employee to make 15 transfers totaling around US$25 million to fraudulent accounts. According to Hong Kong police, the people in the meeting had been recreated as deepfakes using publicly available recordings.</p>
+<p>A deepfake is an AI-generated or manipulated imitation that makes someone appear to say or do something they never did. But what exactly separates a deepfake from an ordinary AI-enhanced photograph? And why should we suddenly distrust technology that we&#x27;ve been using to alter our images for years?</p>
+<p>Think about how we use our phones. Take a selfie and look at the result. Depending on your settings, software might combine several exposures, adjust colors, sharpen details, or blur the background. You can then apply a beauty filter or change the lighting. Nonetheless, your friends don&#x27;t say that the photo stopped being of you, right?</p>
+<p>The distinction isn&#x27;t simply how much AI was involved. It&#x27;s what the resulting image or video claims about reality. Removing a blemish doesn&#x27;t mean you attended a meeting you never joined. Recreating your face to authorize a transaction, however, gives someone else the ability to act in your name. The problem with deepfakes isn&#x27;t that algorithms can alter what we see. It&#x27;s that our systems still rely on what we see to establish whom we can trust.</p>
+<p>Imagine someone collecting your LinkedIn posts, interviews, photographs, and videos from years of being online. That material reveals your speaking style, professional relationships, and habits. Automated AI tools can help collect these digital footprints, while generative models can turn them into convincing imitations. Someone who has never met you could potentially reproduce your voice, reference your colleagues, and present themselves as you in a conversation.</p>
+<p>This is a form of social engineering: manipulating people into making decisions that compromise security. In Arup&#x27;s case, the attackers didn&#x27;t need to convince a banking system that they were authorized employees. They convinced an actual employee to authorize the transfers. A secure banking platform cannot, by itself, prevent a legitimate account holder from making a fraudulent payment. The employee&#x27;s ability to recognize the people on the screen, normally a reassuring sign, became part of the deception.</p></div>
+          </section>
+          <aside class="pull-quote"><span class="quote-mark" aria-hidden="true">“</span><p>The employee’s ability to recognize the people on the screen, normally a reassuring sign, became part of the deception.</p><span class="quote-label">WHEN FAMILIARITY BECOMES AN ATTACK VECTOR</span></aside>
+          <section class="chapter" id="the-detectors" aria-labelledby="detectors-heading">
+            <div class="chapter-heading"><span>02 / THE TECHNOLOGY</span><h2 id="detectors-heading">Can the machine<br><em>catch the machine?</em></h2></div>
+            <div class="article-prose"><p>A possible response is to use AI to detect AI. Deepfake detectors examine images, videos, and audio recordings for signs of artificial generation. But these signs change as the technology improves. In a 2025 study, researchers tested detection software against deepfakes collected from real websites and social media. Systems that performed well on older academic tests struggled considerably with the newer material. Even ordinary image compression can make detection harder. And what happens when an authentic recording is incorrectly labeled fake? We&#x27;d be giving another algorithm considerable influence over what counts as reliable evidence, without necessarily understanding how it reached its conclusion.</p>
+<p>Another approach is to verify a file&#x27;s history rather than guess whether it looks real. The C2PA standard allows certain photographs and videos to carry information about the software or devices used to create and edit them. This information can be digitally signed, creating a record that makes unauthorized changes detectable. A newsroom could use it to investigate a photograph before publishing it. But even a valid record doesn&#x27;t prove that the photographed event happened as described. Someone could stage a scene and photograph it using a device that produces perfectly valid credentials. Such records can also disappear when content is shared through unsupported software or converted into screenshots. We can verify aspects of a file&#x27;s history without necessarily verifying the truth of its contents.</p></div>
+            <div class="margin-evidence"><span>INSIGHT / 02</span><p>A file can have a verifiable history and still depict a staged event.</p></div>
+          </section>
+          <section class="chapter" id="the-law" aria-labelledby="law-heading">
+            <div class="chapter-heading"><span>03 / THE REGULATION</span><h2 id="law-heading">Protection is not<br><em>prevention.</em></h2></div>
+            <div class="article-prose"><p>Governments have begun approaching the problem differently. Since August 2026, the European Union&#x27;s AI Act has required disclosure for certain AI-generated deepfakes. China introduced rules requiring specified synthetic content to carry identifying labels. In October 2026, Denmark proposed legislation protecting people&#x27;s appearances and voices against realistic digital imitation without consent. These approaches address different problems: informing audiences, tracing synthetic content, and protecting individuals from impersonation. Yet none directly guarantees that someone appearing in a private video call is who they claim to be.</p>
+<p>In a 2025 Scientific American editorial, the editors argued that people need stronger legal rights over their own faces and voices. Their reasoning is compelling: without enforceable protections, victims have limited ways to demand the removal of unauthorized imitations or hold their creators accountable. I agree that these protections matter, particularly for people whose images are shared without consent. But legal remedies for deepfakes and procedures that prevent fraud are two different things. The attackers in Arup&#x27;s case were already committing fraud. Giving their victims additional legal rights over their likenesses would not necessarily have stopped an employee from believing the video conference was genuine.</p></div>
+          </section>
+          <div class="interlude" role="img" aria-label="Editorial graphic: Recognition is not the same as verification"><div class="interlude-label">A DIFFERENT TRUST MODEL</div><div class="interlude-lines"><span>RECOGNIZE</span><strong aria-hidden="true">≠</strong><span>VERIFY</span></div><div class="interlude-sub">FAMILIARITY ≠ AUTHORITY</div></div>
+          <section class="chapter" id="the-response" aria-labelledby="response-heading">
+            <div class="chapter-heading"><span>04 / THE RESPONSE</span><h2 id="response-heading">A new standard<br><em>for trust.</em></h2></div>
+            <div class="article-prose"><p>We therefore need to reconsider what counts as proof of identity, particularly when money or sensitive information is involved. A recognizable face or voice should no longer be the final confirmation. Companies can require employees to verify unusual payment requests through a separately established contact channel, rather than the number or meeting link provided in the original message. Large transfers can require approval from another employee who independently confirms the request. These procedures don&#x27;t depend on whether a deepfake looks realistic, how advanced its underlying model is, or whether detection software recognizes it.</p>
+<p>Of course, additional verification creates friction. Nobody wants to confirm their identity through three different channels before joining an ordinary video call. But a casual conversation and a multimillion-dollar transaction shouldn&#x27;t require the same level of trust. The consequences of a mistake are different, and our verification procedures should reflect that difference. We already accept additional authentication when accessing bank accounts or sensitive information. Requiring independent confirmation before an unusually large transfer is a far smaller compromise than recovering millions of dollars after the fraud has occurred.</p>
+<p>We&#x27;ve spent years becoming comfortable with algorithms modifying what we see. Now those same technological developments allow others to make it appear that we participated in events we never attended, said things we never said, or authorized transactions we never approved. Laws, detection software, and digital records all have a role in addressing the problem. But they cannot substitute for security procedures that distinguish recognizing a person from verifying their authority.</p>
+<p>Our ability to recognize someone was never a guarantee of their identity. Deepfakes have simply made the weakness impossible to ignore.</p></div>
+          </section>
+          <div class="essay-end"><span class="end-symbol">✳</span><span>END OF OPINION</span><span class="end-rule"></span></div>
+          <div class="author-note"><div class="author-monogram">HD</div><div><p class="small-eyebrow">ABOUT THE AUTHOR</p><h3>Hammon Dutra</h3><p>Undergraduate student at Minerva University. This op-ed was developed for IL14002 as a public-writing assignment.</p></div></div>
+          <section class="sources-section" id="sources"><details><summary><span><span class="small-eyebrow">EVIDENCE & ATTRIBUTION</span><strong>Sources and further reading</strong></span><span class="sources-toggle" aria-hidden="true">+</span></summary><ol>
+<li><span class="source-org">The Guardian</span>. (17 May 2024). <a href="https://www.theguardian.com/technology/article/2024/may/17/uk-engineering-arup-deepfake-scam-hong-kong-ai-video" target="_blank" rel="noopener noreferrer">UK engineering firm Arup falls victim to £20m deepfake scam <span aria-hidden="true">↗</span></a></li><li><span class="source-org">Chandra et al.</span>. (2025, revised 2026). <a href="https://arxiv.org/abs/2503.02857" target="_blank" rel="noopener noreferrer">Deepfake-Eval-2024: A Multi-Modal In-the-Wild Benchmark of Deepfakes Circulated in 2024 <span aria-hidden="true">↗</span></a></li><li><span class="source-org">C2PA</span>. (n.d.). <a href="https://spec.c2pa.org/specifications/specifications/2.4/explainer/Explainer.html" target="_blank" rel="noopener noreferrer">C2PA and Content Credentials Explainer <span aria-hidden="true">↗</span></a></li><li><span class="source-org">European Commission</span>. (2026). <a href="https://digital-strategy.ec.europa.eu/en/faqs/transparency-obligations-under-article-50-ai-act" target="_blank" rel="noopener noreferrer">Transparency obligations under Article 50 of the AI Act <span aria-hidden="true">↗</span></a></li><li><span class="source-org">DLA Piper</span>. (July 2026). <a href="https://www.dlapiper.com/en/insights/publications/2026/07/deepfakes-and-the-law-perspectives-from-the-eu-and-china" target="_blank" rel="noopener noreferrer">Deepfakes and the law: perspectives from the EU and China <span aria-hidden="true">↗</span></a></li><li><span class="source-org">Reuters</span>. (8 October 2026). <a href="https://www.reuters.com/world/denmark-plans-ban-sharing-ai-deepfakes-without-consent-2026-10-08/" target="_blank" rel="noopener noreferrer">Denmark plans ban on sharing AI deepfakes without consent <span aria-hidden="true">↗</span></a></li><li><span class="source-org">Scientific American editors</span>. (2025). <a href="https://www.scientificamerican.com/article/we-need-laws-to-stop-ai-generated-deepfakes/" target="_blank" rel="noopener noreferrer">We Need Laws to Stop AI-Generated Deepfakes <span aria-hidden="true">↗</span></a></li>
+</ol></details></section>
+        </article>
+      </div>
+    </div>
+    <section class="related" aria-labelledby="related-title"><div class="related-top"><span>FROM THE PUBLIC WRITING PORTFOLIO</span><span>READ NEXT ↗</span></div><div class="related-inner"><div><p class="related-index">02 / FILM REVIEW</p><h2 id="related-title">Vulnerability<br><em>as a Transaction</em></h2><p>A reading of <cite>Black Mirror: White Christmas</cite>, on technology, connection, and emotional vulnerability.</p><a class="related-link" href="../film-review/">EXPLORE THE FILM REVIEW <span aria-hidden="true">↗</span></a></div><div class="related-art" aria-hidden="true"><span>BLACK<br>MIRROR</span><div class="related-circle"></div><span class="related-art-bottom">WHITE CHRISTMAS / FILM REVIEW</span></div></div></section>
+  </main>
+  <footer class="page-footer"><a href="../../">HD<span class="brand-dot">.</span> / PUBLIC WRITING</a><span>IL14002 • MINERVA UNIVERSITY • 2026</span><a href="#page-title">BACK TO TOP ↑</a></footer>
+</body>
+</html>
