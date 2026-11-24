@@ -1,15 +1,15 @@
 [
   {
-    "slug": "your-face-is-no-longer-proof",
-    "assignment": 5,
-    "type": "Opinion essay · Cybersecurity",
-    "title": "Your Face Is No Longer Proof You Were There",
-    "displayTitle": "Your Face Is<br>No Longer <em>Proof</em><br>You Were There",
-    "description": "What should count as proof of identity when someone's face and voice can be convincingly recreated?",
-    "path": "writings/op-ed/",
+    "slug": "academic-minute",
+    "assignment": 1,
+    "type": "Academic Minute · Audio",
+    "title": "Academic Minute Essay",
+    "displayTitle": "Academic Minute",
+    "description": "A recorded argument about AI assistance and disclosure in academic writing.",
+    "path": "writings/academic-minute/",
     "year": 2026,
-    "style": "dark",
-    "label": "READ THE OP-ED"
+    "style": "green",
+    "label": "LISTEN AND READ"
   },
   {
     "slug": "vulnerability-as-a-transaction",
@@ -22,5 +22,41 @@
     "year": 2026,
     "style": "red",
     "label": "READ THE FILM REVIEW"
+  },
+  {
+    "slug": "time-capsule",
+    "assignment": 3,
+    "type": "Time Capsule Letter",
+    "title": "Panem et Circenses",
+    "displayTitle": "Panem et <em>Circenses</em>",
+    "description": "A fictional letter to a sister, imagining an ordinary Sunday in 2038.",
+    "path": "writings/time-capsule/",
+    "year": 2026,
+    "style": "ochre",
+    "label": "READ THE LETTER"
+  },
+  {
+    "slug": "author-profile",
+    "assignment": 4,
+    "type": "Interview and Public Profile",
+    "title": "The Writing Assistant That Refuses to Write",
+    "displayTitle": "The Writing Assistant That Refuses to Write",
+    "description": "A profile of Maik Slipczuk, by Hammon Dutra and Sophareth (Phareth) Hao.",
+    "path": "writings/author-profile/",
+    "year": 2026,
+    "style": "violet",
+    "label": "READ THE PROFILE"
+  },
+  {
+    "slug": "your-face-is-no-longer-proof",
+    "assignment": 5,
+    "type": "Opinion essay · Cybersecurity",
+    "title": "Your Face Is No Longer Proof You Were There",
+    "displayTitle": "Your Face Is<br>No Longer <em>Proof</em><br>You Were There",
+    "description": "What should count as proof of identity when someone's face and voice can be convincingly recreated?",
+    "path": "writings/op-ed/",
+    "year": 2026,
+    "style": "dark",
+    "label": "READ THE OP-ED"
   }
 ]

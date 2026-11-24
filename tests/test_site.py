@@ -45,7 +45,7 @@ class SiteTests(unittest.TestCase):
         parser.feed(self.article)
         source = (ROOT / 'content/op-ed/article-source.txt').read_text(encoding='utf-8')
         self.assertEqual(source.strip().split('\n\n')[1:], parser.paragraphs)
-        self.assertEqual(14, len(parser.paragraphs))
+        self.assertEqual(10, len(parser.paragraphs))
 
     def test_frozen_references_are_visible(self):
         self.assertEqual(7, self.article.count('<li><span class="source-org">'))
@@ -64,16 +64,28 @@ class SiteTests(unittest.TestCase):
         self.assertIn('prefers-reduced-motion', (ROOT/'writings/op-ed/styles.css').read_text())
         self.assertNotIn('CASE FILE // 001', self.article)
         self.assertNotIn('portrait-svg', self.article)
-        self.assertIn('aria-pressed', self.article)
+        self.assertNotIn('focus-toggle', self.article)
+        for phrase in ('VERIFY THE REQUEST', 'NOT JUST THE FACE', 'RECOGNITION IS NOT AUTHENTICATION', 'THE IDENTITY ISSUE', 'Core distinction'):
+            self.assertNotIn(phrase.lower(), self.article.lower())
         self.assertIn('url=../writings/op-ed/', (ROOT/'op-ed/index.html').read_text())
+
+    def test_new_publications_match_final_sources(self):
+        for slug in ('academic-minute', 'time-capsule', 'author-profile'):
+            parser = Reader()
+            parser.feed((ROOT / 'writings' / slug / 'index.html').read_text(encoding='utf-8').replace('<br>', '\x0b'))
+            source = (ROOT / 'content' / slug / 'article-source.txt').read_text(encoding='utf-8').strip().split('\n\n')[1:]
+            self.assertEqual(source, parser.paragraphs)
+        minute = (ROOT / 'writings/academic-minute/index.html').read_text()
+        self.assertIn('youtube-nocookie.com/embed/AoS5kuewdhs', minute)
+        self.assertIn('Sophareth (Phareth) Hao', (ROOT / 'writings/author-profile/index.html').read_text())
+        self.assertEqual(5, len(json.loads((ROOT / 'content/writings.json').read_text())))
 
     def test_each_portfolio_entry_has_safe_local_route(self):
         for entry in json.loads((ROOT/'content/writings.json').read_text()):
             self.assertTrue(entry['path'].startswith('writings/'))
             self.assertNotIn('..', entry['path'])
             self.assertTrue(entry['path'].endswith('/'))
-            if entry['path'] != 'writings/film-review/':
-                self.assertTrue((ROOT/entry['path']/'index.html').exists())
+            self.assertTrue((ROOT/entry['path']/'index.html').exists())
 
 
 if __name__ == '__main__':

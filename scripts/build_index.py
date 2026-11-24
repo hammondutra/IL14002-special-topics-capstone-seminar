@@ -27,7 +27,7 @@ def generate():
         path = item["path"]
         if not path.startswith("writings/") or ".." in path or not path.endswith("/"):
             raise ValueError(f"Unsafe or non-canonical writing path: {path}")
-        style = {'dark': 'card-one', 'red': 'card-two'}[item['style']]
+        style = {'dark': 'card-one', 'red': 'card-two', 'green': 'card-three', 'ochre': 'card-four', 'violet': 'card-five'}[item['style']]
         display_title = item['displayTitle']
         # Only intentionally formatted metadata is permitted: text, <br>, <em>.
         cleaned = display_title.replace('<br>', '').replace('<em>', '').replace('</em>', '')
@@ -43,7 +43,7 @@ def generate():
     template = TEMPLATE.read_text(encoding="utf-8")
     if template.count('<!-- WRITING_CARDS -->') != 1 or template.count('<!-- ARTICLE_COUNT -->') != 1:
         raise ValueError('Missing expected portfolio placeholders')
-    html = template.replace('<!-- WRITING_CARDS -->', '\n'.join(cards)).replace('<!-- ARTICLE_COUNT -->', f'{len(items):02d} ARTICLES')
+    html = template.replace('<!-- WRITING_CARDS -->', '\n'.join(cards)).replace('<!-- ARTICLE_COUNT -->', f'{len(items):02d} WORKS')
     return html
 
 

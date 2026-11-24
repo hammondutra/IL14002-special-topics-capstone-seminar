@@ -1,0 +1,15 @@
+Academic Minute Essay
+
+Generative models can feel unpredictable at times, kinda like an angry dog. When you're walking one, it might latch onto a tree or react strangely when a kid asks to pet it. Whatever makes the dog angry, though, if you're holding the leash, you're responsible for what happens next.
+
+After the messy introduction of AI in academia, researchers became like tutors trying to walk their crazy dogs in a park. And, understandably, everyone wanted to know who was walking one. Academic journals’ first response was intuitive: if researchers used generative AI to help write a paper, they should disclose it. Disclosure, after all, could stop people from taking credit for machine work, help readers evaluate claims, and help editors enforce journal policies.
+
+But Mohammad Hosseini, Bert Gordijn, Gregory Kaebnick, and Kristi Holmes now argue that this logic no longer works well in one specific case: AI used only as a writing assistant. In this case, writing a paper is not about handing the dog the map and letting it decide where the research goes. It is about researchers who already did the research and wrote the ideas, then used AI to improve grammar, style, or readability.
+
+Think about how we already write. We use spell-checkers, dictionaries, grammar software, and reference managers without documenting every intervention. As AI becomes embedded into the same writing process, what exactly counts as an AI contribution worth declaring? If I write a paragraph, ask ChatGPT to make it clearer, rewrite half of its suggestions, and then run another grammar check, which words are mine and which are the machine’s?
+
+The more intertwined the editing becomes, the less useful that boundary is. A blanket statement says too little. Sentence-by-sentence tracking asks authors to document nearly every edit. Even worse, free-text disclosures can shape perception more than they clarify the process. “Used AI to polish writing” sounds harmless. “Included AI-reviewed draft as final version” sounds much more dramatic. Yet both could describe almost the same thing.
+
+That matters especially for non-native English speakers. If AI helps two researchers express equally strong scientific ideas in clearer English, should one paper be viewed differently just because its author disclosed using a language-support tool? Hosseini and his coauthors therefore propose something more modest: make disclosure voluntary and standardized, using checkboxes rather than open-ended statements, with that information appearing only after publication.
+
+Perhaps academia is asking too broad a question when it asks, “Was AI used?” when the more useful question may be: what did AI actually do? If it shaped the research, that is one conversation. But if it only helped polish the language, mandatory disclosure may tell us less than we think. The author still holds the leash (and still owns the responsibility), but not every tug needs to be reported.
