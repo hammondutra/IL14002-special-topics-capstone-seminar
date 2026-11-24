@@ -40,6 +40,7 @@ jobs:
       contents: read
       pages: write
       id-token: write
+      actions: read
     if: github.event_name != 'pull_request'
     needs: test
     runs-on: ubuntu-latest
@@ -52,6 +53,23 @@ jobs:
       - uses: actions/upload-pages-artifact@v3
         with:
           path: .
+      - name: Confirm Pages artifact is discoverable
+        env:
+          GH_TOKEN: ${{ github.token }}
+        shell: bash
+        run: |
+          for attempt in {1..18}; do
+            if count=$(gh api "repos/$GITHUB_REPOSITORY/actions/runs/$GITHUB_RUN_ID/artifacts?name=github-pages" --jq '[.artifacts[] | select(.name == "github-pages" and .expired == false)] | length'); then
+              if [[ "$count" -gt 0 ]]; then
+                echo "Pages artifact visible after attempt $attempt."
+                exit 0
+              fi
+            fi
+            echo "Artifact metadata not ready (attempt $attempt/18)."
+            sleep 5
+          done
+          echo "::error::Uploaded github-pages artifact did not become visible in the Actions API."
+          exit 1
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
