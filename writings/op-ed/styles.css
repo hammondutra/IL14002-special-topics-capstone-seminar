@@ -21,3 +21,10 @@
 
 /* Keep the original sidebar/grid and make section boundaries read like normal paragraphs. */
 .chapter:not(:first-of-type){padding-top:0}.chapter+.chapter{margin-top:1.42em;font-size:clamp(18px,1.45vw,20px)}.author-link{display:inline-flex;gap:8px;align-items:center;font-family:var(--sans);font-size:14px;font-weight:600;text-decoration:underline;text-underline-offset:4px;color:var(--red-dark)}.linkedin-mark{background:#0a66c2;color:white;font:700 13px/1 Arial,sans-serif;border-radius:3px;padding:4px 5px}.author-link:hover{text-decoration-thickness:2px}@media(max-width:430px){.chapter+.chapter{font-size:19px}}
+
+/* Final reading layout: one sticky sidebar, independent of the manuscript. */
+.reading-layout{display:grid;grid-template-columns:minmax(155px,210px) minmax(0,775px);column-gap:clamp(28px,5vw,84px);align-items:start;justify-content:center;max-width:1150px;margin-inline:auto}
+.chapter-sidebar{display:block;grid-column:1;grid-row:1;position:sticky;top:32px;align-self:start;min-width:0;max-height:calc(100vh - 64px);overflow:auto;padding:2px 8px 8px 0}
+.chapter-sidebar>*{position:static;top:auto}.sidebar-head{margin:0 0 24px}.chapter-links{display:grid;gap:15px}.chapter-links a{min-width:0;overflow-wrap:anywhere}.chapter-links a.active,.chapter-links a:hover{transform:none}
+.article-body{grid-column:2;grid-row:1;min-width:0;width:100%}.chapter{scroll-margin-top:16px}.article-prose a{color:var(--red-dark);text-decoration:underline;text-decoration-thickness:1px;text-underline-offset:3px;overflow-wrap:anywhere}.article-prose a:hover{text-decoration-thickness:2px}.author-note{margin-top:44px}
+@media(max-width:780px){.reading-layout{display:block;max-width:775px}.chapter-sidebar{display:none}.article-body{width:100%}}

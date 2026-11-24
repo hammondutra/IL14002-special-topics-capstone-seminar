@@ -16,6 +16,8 @@ class Reader(HTMLParser):
         self.in_prose = False
         self.current = None
         self.paragraphs = []
+        self.links = []
+        self.anchor = None
 
     def handle_starttag(self, tag, attrs):
         attrs = dict(attrs)
@@ -23,12 +25,18 @@ class Reader(HTMLParser):
             self.in_prose = True
         if tag == 'p' and self.in_prose:
             self.current = ''
+        if tag == 'a' and self.current is not None:
+            self.anchor = (len(self.current), attrs.get('href'))
 
     def handle_data(self, data):
         if self.current is not None:
             self.current += data
 
     def handle_endtag(self, tag):
+        if tag == 'a' and self.anchor is not None:
+            offset, url = self.anchor
+            self.links.append(dict(paragraph=len(self.paragraphs)+1, offset=len(self.current[:offset].encode('utf-16-le'))//2, text=self.current[offset:], url=url))
+            self.anchor = None
         if tag == 'p' and self.current is not None:
             self.paragraphs.append(self.current)
             self.current = None
@@ -46,6 +54,13 @@ class SiteTests(unittest.TestCase):
         source = (ROOT / 'content/op-ed/article-source.txt').read_text(encoding='utf-8')
         self.assertEqual(source.strip().split('\n\n')[1:], parser.paragraphs)
         self.assertEqual(10, len(parser.paragraphs))
+
+    def test_oped_inline_hyperlinks_match_google_docs(self):
+        parser = Reader()
+        parser.feed(self.article)
+        expected = json.loads((ROOT / 'content/op-ed/inline-links.json').read_text(encoding='utf-8'))
+        self.assertEqual(6, len(expected))
+        self.assertEqual(expected, parser.links)
 
     def test_oped_sidebar_without_inserted_headings(self):
         self.assertIn('class="chapter-sidebar"', self.article)
