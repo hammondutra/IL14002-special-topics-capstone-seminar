@@ -47,11 +47,14 @@ class SiteTests(unittest.TestCase):
         self.assertEqual(source.strip().split('\n\n')[1:], parser.paragraphs)
         self.assertEqual(10, len(parser.paragraphs))
 
-    def test_oped_has_no_added_subheadings(self):
-        self.assertEqual(1, self.article.count('class="article-prose"'))
-        for phrase in ('The Arup fraud', 'Detection and provenance', 'Legal responses', 'Verification procedures', 'chapter-sidebar', 'chapter-heading', 'data-chapter', 'Undergraduate student at Minerva University'):
-            self.assertNotIn(phrase, self.article)
+    def test_oped_sidebar_without_inserted_headings(self):
+        self.assertIn('class="chapter-sidebar"', self.article)
+        self.assertNotIn('class="chapter-heading"', self.article)
+        for section in ('the-case', 'the-detectors', 'the-law', 'the-response'):
+            self.assertIn(f'href="#{section}"', self.article)
+            self.assertIn(f'id="{section}"', self.article)
         self.assertIn('https://www.linkedin.com/in/hammon-dutra/', self.article)
+        self.assertNotIn('Undergraduate student at Minerva University', self.article)
 
     def test_frozen_references_are_visible(self):
         self.assertEqual(7, self.article.count('<li><span class="source-org">'))
